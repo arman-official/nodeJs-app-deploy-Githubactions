@@ -1,0 +1,25 @@
+{
+  "name": "goyal",
+  "version": "1.0.0",
+  "description": "sss",
+  "keywords": [
+    "no"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "license": "ISC",
+  "author": "gupta",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
