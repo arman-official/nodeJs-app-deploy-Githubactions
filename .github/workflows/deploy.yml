@@ -9,17 +9,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-  steps:
-      -name: Checkout Code
-        uses: actions/checkout@v2
+steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
 
-      - name: Deploy via SSH
-        uses: appleboy/ssh-actions@v1.0.3
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: root
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            cd /home/ubuntu/nodeJs-app-deploy-Githubactions
-            git pull
-            docker compose up -d --build
+    - name: Deploy via SSH
+      uses: appleboy/ssh-actions@v1.0.3
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: root
+        key: ${{ secrets.SSH_KEY }}
+        script: |
+          cd /home/ubuntu/nodeJs-app-deploy-Githubactions
+          git pull
+          docker compose up -d --build
